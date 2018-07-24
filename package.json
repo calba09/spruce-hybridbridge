@@ -1,0 +1,28 @@
+{
+  "name": "spruce-hybridbridge",
+  "version": "0.1.0",
+  "description": "Cordova methods",
+  "cordova": {
+    "id": "spruce-hybridbridge",
+    "platforms": [
+      "ios",
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calba09/spruce-hybridbridge.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "hello",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Carlos Alba",
+  "license": "Apache-2",
+  "bugs": {
+    "url": "https://github.com/calba09/spruce-hybridbridge/issues"
+  },
+  "homepage": "https://github.com/calba09/spruce-hybridbridge#readme"
+}

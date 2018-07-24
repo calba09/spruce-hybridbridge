@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.belkin.spruce"
+        version="0.1.0">
+
+  <name>HybridBridge</name>
+
+  <engines>
+    <engine name="cordova" version=">=7.4.0"/>
+  </engines>
+
+  <asset src="www/HybridBridge" target="js/HybridBridge.js"/>
+
+  <js-module src="www/HybridBridge.js" name="HybridBridge">
+    <clobbers target="HybridBridge" />
+  </js-module>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="HybridBridge">
+        <param name="ios-package" value="HybridBridge" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/HybridBridge.h" target-dir="HybridBridgePlugin"/>
+  </platform>
+
+</plugin>
