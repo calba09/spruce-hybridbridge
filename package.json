@@ -1,11 +1,11 @@
 {
   "name": "spruce-hybridbridge",
   "version": "0.1.0",
-  "description": "Cordova methods",
+  "description": "ZeroConf plugin for Cordova/Phonegap",
   "cordova": {
     "id": "spruce-hybridbridge",
     "platforms": [
-      "ios",
+      "ios"
     ]
   },
   "repository": {
@@ -13,14 +13,17 @@
     "url": "git+https://github.com/calba09/spruce-hybridbridge.git"
   },
   "keywords": [
-    "cordova",
-    "plugin",
-    "hello",
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
   ],
   "author": "Carlos Alba",
-  "license": "Apache-2",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/calba09/spruce-hybridbridge/issues"
   },

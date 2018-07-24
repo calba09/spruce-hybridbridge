@@ -1,4 +1,3 @@
-cordova.define("spruce-hybridbridge.HybridBridge", function(require, exports, module) {
 var hybridBridge = {
     
     bindListener: function(listener) {
@@ -33,5 +32,3 @@ var hybridBridge = {
 };
 
 module.exports = hybridBridge;
-
-});

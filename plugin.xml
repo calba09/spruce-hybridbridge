@@ -20,7 +20,7 @@
         <param name="ios-package" value="HybridBridge" />
       </feature>
     </config-file>
-    <header-file src="src/ios/HybridBridge.h" target-dir="HybridBridgePlugin"/>
+    <header-file src="src/ios/HybridBridge.swift" target-dir="HybridBridgePlugin"/>
   </platform>
 
 </plugin>

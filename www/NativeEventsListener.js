@@ -1,4 +1,3 @@
-cordova.define("spruce-hybridbridge.NativeEventsListener", function(require, exports, module) {
 var NativeEventsListener = {
 
 	onReceivedEvent = function(eventData) {
@@ -26,5 +25,3 @@ var NativeEventsListener = {
 };
 
 module.exports = NativeEventsListener;
-
-});
