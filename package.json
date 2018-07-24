@@ -1,7 +1,7 @@
 {
   "name": "spruce-hybridbridge",
   "version": "0.1.0",
-  "description": "ZeroConf plugin for Cordova/Phonegap",
+  "description": "hybrid Implementation",
   "cordova": {
     "id": "spruce-hybridbridge",
     "platforms": [
