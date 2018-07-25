@@ -1,27 +1,27 @@
 var NativeEventsListener = {
 
-	onReceivedEvent = function(eventData) {
-		logger.log("onReceivedEvent :: eventData :: " + JSON.stringify(eventData));
+  onReceivedEvent : function(eventData) {
+    logger.log("onReceivedEvent :: eventData :: " + JSON.stringify(eventData));
+                   
+    var eventHandler = function(){};
+                   
+    switch (eventData.eventType) { // Add Here more Actions from Native
+      case "goTo":
+        eventHandler = goToSelectedView;
+      break;
+      default:
+        logger.log("onReceivedEvent :: unreconized eventType");
+    }
+    eventHandler(eventData);
+  }
+};
 
-		var eventHandler = function(){};
+// Function Implementations
 
-		switch (eventData.eventType) { // Add Here more Actions from Native
-			case "goTo":
-				eventHandler = processSegmentedClickEvent;
-			break;
-			default:
-				logger.log("onReceivedEvent :: unreconized eventType");
-		}
-		eventHandler(eventData);
-	};
+function goToSelectedView(eventData) {
+    var viewId = eventData.viewIndex;
 
-	// Function Implementations
-
-	function processSegmentedClickEvent(eventData) {
-		var viewId = eventData.viewIndex;
-
-		logger.log("Go To Selected View :: viewID :: " + viewId);
-	}
+    logger.log("Go To Selected View :: viewID :: " + viewId);
 };
 
 module.exports = NativeEventsListener;

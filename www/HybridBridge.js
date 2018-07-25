@@ -18,7 +18,7 @@ var hybridBridge = {
             "setView",
             [title]
         );
-    }
+    },
     
     updateView: function(title) {
         cordova.exec(

@@ -13,6 +13,9 @@
   <js-module src="www/HybridBridge.js" name="HybridBridge">
     <clobbers target="spruce.hybridbridge" />
   </js-module>
+  <js-module src="www/NativeEventsListener.js" name="NativeEventsListener">
+      <clobbers target="spruce.hybridbridge" />
+  </js-module>
 
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
@@ -20,8 +23,7 @@
         <param name="ios-package" value="HybridBridge" />
       </feature>
     </config-file>
-    <header-file src="src/ios/HybridBridge.h" target-dir="HybridBridgePlugin"/>
-    <header-file src="src/ios/HybridBridge.m" target-dir="HybridBridgePlugin"/>
+    <header-file src="src/ios/HybridBridge.swift" target-dir="HybridBridgePlugin"/>
   </platform>
 
 </plugin>
