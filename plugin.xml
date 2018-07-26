@@ -11,10 +11,10 @@
   </engines>
 
   <js-module src="www/HybridBridge.js" name="HybridBridge">
-    <clobbers target="spruce.hybridbridge" />
+    <clobbers target="hybridBridge" />
   </js-module>
   <js-module src="www/NativeEventsListener.js" name="NativeEventsListener">
-      <clobbers target="spruce.hybridbridge" />
+      <clobbers target="NativeEventsListener" />
   </js-module>
 
   <platform name="ios">

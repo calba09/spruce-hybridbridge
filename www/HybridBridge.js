@@ -1,7 +1,13 @@
+var exec = require('cordova/exec');
+var success = function() {}
+var fail = function(msg){
+    console.error('Bridge exec error: '+msg);
+}
+
 var hybridBridge = {
     
     bindListener: function(listener) {
-        cordova.exec(
+        exec(
             listener,
             listener,
             "HybridBridge",
@@ -11,21 +17,21 @@ var hybridBridge = {
     },
 
     setView: function(title) {
-        cordova.exec(
-            null,
-            null,
+        exec(
+            success,
+            fail,
             "HybridBridge",
-            "setView",
+            "setValue",
             [title]
         );
     },
     
     updateView: function(title) {
-        cordova.exec(
-            null,
-            null,
+        exec(
+            success,
+            fail,
             "HybridBridge",
-            "updateView",
+            "updateValue",
             [title]
         );
     }

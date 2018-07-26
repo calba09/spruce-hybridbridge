@@ -8,13 +8,13 @@
 
 import Foundation
 
-class HybridBridge: CDVPlugin {
+@objc(HybridBridge) class HybridBridge: CDVPlugin {
     
     private var listenerCallbackId : String = String()
     
     //MARK: Action Methods
-
-    func bindListener(command : CDVInvokedUrlCommand) {
+    
+    public func bindListener(_ command : CDVInvokedUrlCommand) {
         self.commandDelegate.run {
             print("Action Bind Listener")
             
@@ -23,11 +23,11 @@ class HybridBridge: CDVPlugin {
             let pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK)
             pluginResult?.setKeepCallbackAs(true)
             
-            self.commandDelegate .send(pluginResult, callbackId: command.callbackId)
+            self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
         }
     }
     
-    func setValue(command : CDVInvokedUrlCommand) {
+    public func setValue(_ command : CDVInvokedUrlCommand) {
         self.commandDelegate.run {
             print("Action Set Value")
             var pluginResult = CDVPluginResult.init()
@@ -47,7 +47,7 @@ class HybridBridge: CDVPlugin {
         }
     }
     
-    func updateValue(command : CDVInvokedUrlCommand) {
+    public func updateValue(_ command : CDVInvokedUrlCommand) {
         self.commandDelegate.run {
             print("Action Update Value")
             var pluginResult = CDVPluginResult.init()
@@ -63,13 +63,13 @@ class HybridBridge: CDVPlugin {
                 pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK)
             }
             
-            self.commandDelegate .send(pluginResult, callbackId: command.callbackId)
+            self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
         }
     }
     
     //MARK: Report Methods
     
-    func reportEvent(eventData : [String : Any]) {
+    public func reportEvent(eventData : [String : Any]) {
         self.commandDelegate.run(inBackground: {
             print("Report Event")
             
