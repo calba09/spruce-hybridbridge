@@ -49,14 +49,14 @@ $ cordova plugin add 'https://github.com/jimmychungbelkin/spruce-bridge.git'
 #### Sending Action
 ```sh
 guard let bridge = self.pluginObjects.value(forKey: "Bridge") as? Bridge else {
-            print("Could find the Bridge in Plugins")
-            return
-        }
-        // Send Dictionary or JSON as event
-        let eventData : [String : Any] = ["goTo":"eventType",
-                                          path:"viewIndex"] // path = "linksys_login/selectLogin"
+    print("Could find the Bridge in Plugins")
+    return
+}
+// Send Dictionary or JSON as event
+let eventData : [String : Any] = ["goTo":"eventType",
+                                  path:"viewIndex"] // path = "linksys_login/selectLogin"
         
-        bridge.reportEvent(eventData: eventData)
+bridge.reportEvent(eventData: eventData)
 ```
 
 ## JavaScript
