@@ -1,6 +1,5 @@
 # spruce-bridge
 
-
 ## Overview
 
 ### Application Architecture
@@ -24,23 +23,26 @@ We'll create a public ***reportEvent()*** method in HybridBridge  that will send
 ### Receiving JavaScript Events
 When something happened in JavaScript. Call ***cordova.exec()*** API to send notification to native piece of Cordova Plugin. From there on send commands to native.
 
-
 ## Installation
 
 in Terminal go to:
 ```sh
 $ cd ${repository_root}/hybrid/symmetry
-$ nano plugins.json
 
-add 'https://github.com/jimmychungbelkin/spruce-bridge.git'
-
-$ node ./hooks/install_plugins.js
+$ cordova plugin add 'https://github.com/jimmychungbelkin/spruce-bridge.git'
 ```
-
  
  > NOTE
  > Make sure you have `spruce-bridge` inside plugins folder.
 
+## iOS
+
+### Bridge.swift
+| Methods | Description |
+| ------ | ------ |
+| bindListener | *Action Bind Listener* |
+| setValue | *Get Value from JavaScript* |
+| reportEvent | *Report Event* |
 
 ### More Info
 For more info on plugins see the *[Plugin Development Guide](http://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html)*
