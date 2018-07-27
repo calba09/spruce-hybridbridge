@@ -1,7 +1,7 @@
 # spruce-bridge
 
+
 ## Overview
----
 
 ### Application Architecture
 ***Native code consists of***
@@ -24,8 +24,8 @@ We'll create a public ***reportEvent()*** method in HybridBridge  that will send
 ### Receiving JavaScript Events
 When something happened in JavaScript. Call ***cordova.exec()*** API to send notification to native piece of Cordova Plugin. From there on send commands to native.
 
+
 ## Installation
----
 
 in Terminal go to:
 ```sh
@@ -36,6 +36,7 @@ add 'https://github.com/jimmychungbelkin/spruce-bridge.git'
 
 $ node ./hooks/install_plugins.js
 ```
+
  
  > NOTE
  > Make sure you have `spruce-bridge` inside plugins folder.
