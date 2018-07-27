@@ -40,9 +40,38 @@ $ cordova plugin add 'https://github.com/jimmychungbelkin/spruce-bridge.git'
 ### Bridge.swift
 | Methods | Description |
 | ------ | ------ |
-| bindListener | *Action Bind Listener* |
-| setValue | *Get Value from JavaScript* |
-| reportEvent | *Report Event* |
+| bindListener | *Action bind listener* |
+| setValue | *Get value from JavaScript* |
+| reportEvent | *Report event* |
+
+### Example
+
+#### Sending Action
+```sh
+guard let bridge = self.pluginObjects.value(forKey: "Bridge") as? Bridge else {
+            print("Could find the Bridge in Plugins")
+            return
+        }
+        // Send Dictionary or JSON as event
+        let eventData : [String : Any] = ["goTo":"eventType",
+                                          path:"viewIndex"] // path = "linksys_login/selectLogin"
+        
+        bridge.reportEvent(eventData: eventData)
+```
+
+## JavaScript
+
+### Bridge.js
+| Methods | Description |
+| ------ | ------ |
+| bindListener | *Action bind listener* |
+| setView | *Set value to Native* |
+
+### NativeEventsListener.js
+| Methods | Description |
+| ------ | ------ |
+| onReceivedEvent | *Received actions from Native* |
+| goToSelectedView | *Place to perform an action* |
 
 ### More Info
 For more info on plugins see the *[Plugin Development Guide](http://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html)*
