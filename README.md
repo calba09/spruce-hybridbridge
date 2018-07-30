@@ -4,7 +4,7 @@
 
 ### Application Architecture
 
-![](doc/Application Architecture.jpg?raw=true)
+![](doc/Application Architecture.jpg)
 
 ***Native code consists of***
 1.	Application native code: the one that handles native application behaviour, native controls, e.g. MainViewController or UIControls.
