@@ -4,7 +4,6 @@
 
 ### Application Architecture
 
-![](/doc/Application%20Architecture.jpg)
 ![Alt text](/doc/Application%20Architecture.jpg?raw=true)
 
 ***Native code consists of***
@@ -17,14 +16,17 @@
 3.	NativeEventsListener: JavaScript listener that will get notifications regarding native events (*this can be done as a part of Bridge Cordova plugin as well, but for the sake of keeping things clear and detached we'll have it as a separate module*).
 
 ### Bind JavaScript Listener
+![Alt text](/doc/Bind%20JS%20Listener.jpg?raw=true)
 First thing we want to do on an application startup is to prepare our native UI layout. This will be done in view controller by using native code. 
 Next, we want to create a binding between JavaScript listener and a native layer. We'll create a ***bindListener()*** method that will take a reference to JavaScript NativeEventsListener and send it to native part of the Bridge Cordova plugin. The plugin will keep the reference to a listener throughout the application lifetime and eventually use it to send native events.
 
 ### Receiving Native Events
+![Alt text](/doc/Receiving%20Native%20Events.jpg?raw=true)
 We'll create a public ***reportEvent()*** method in Bridge  that will send native events to JavaScript listener attached in previous step. Once native event has occurred (*e.g. IBAction*) application code will get a reference to the Bridge plugin by using Cordova APIs and use ***reportEvent()*** API to send this event to a JavaScript layer.  Once event is received in JavaScript layer - it can be processed by a custom JavaScript code. 
 `This is the default way Cordova plugins work.`
 
 ### Receiving JavaScript Events
+![Alt text](/doc/Receiving%20JavaScript%20Events.jpg?raw=true)
 When something happened in JavaScript. Call ***cordova.exec()*** API to send notification to native piece of Cordova Plugin. From there on send commands to native.
 
 ## Installation
